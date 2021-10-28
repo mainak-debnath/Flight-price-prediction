@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Travelmania</title>
+    {% block stylesheet %}
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/Travelmania.css') }}"/>
+    {% endblock stylesheet %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <section class="header">
+        <div class="container">
+            <img src="{{url_for('static', filename = 'images/logo_transparent.png') }}">
+        </div>
+        <button type="button" class="flight-btn"><a href="{{url_for('flight') }}" class="class1">Flight</a></button>
+        <button type="button" class="login-btn"><a href="{{url_for('index') }}" class="class1">Login</a></button>
+        <button type="button" class="signup-btn"><a href="{{url_for('signup') }}" class="class1">Signup</a></button>
+        <button type="button" class="home-btn"><a href="#" class="class1">Home</a></button>
+        <h1>Travel Across South India</h1>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search Location or Area">
+            <div class="input-group-append">
+                <button type="submit" class="input-group-text btn">Search</button>
+            </div>
+        </div>
+    </section>
+    <section class="features">
+        <h1>Featured Destinations</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-img">
+                            <img src="{{url_for('static', filename = 'images/hampi.jpg') }}">
+                            <div class="price">
+                                <p>Rs.25,000</p>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                            </div>
+                        </div>
+                        <div class="feature-details">
+                            <h4><a href="{{url_for('Karnataka') }}" class="class2"> Karnataka</a></h4>
+                            <p>Karnataka is a state in southwest India with Arabian Sea coastlines. The capital, Bengaluru (formerly Bangalore), is a high-tech hub known for its shopping and nightlife. To the southwest, Mysore is home to lavish temples including Mysore Palace, former seat of the region’s maharajas. Hampi, once the medieval Vijayanagara empire’s capital, contains ruins of Hindu temples, elephant stables and a stone chariot.</p>
+                            <div>
+                                <span><i class="fa fa-map-marker"></i>Karnataka</span>
+                                <span><i class="fa fa-sun-o"> 3 Days</i></span>
+                                <span><i class="fa fa-moon-o"></i>2 Nights</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-img">
+                            <img src="{{url_for('static', filename = 'images/pondicherry.jpg') }}">
+                            <div class="price">
+                                <p>Rs.30,000</p>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="feature-details">
+                            <h4><a href="{{url_for('tamilnadu') }}" class="class2">Tamil Nadu</a></h4>
+                            <p>Tamil Nadu, a South Indian state, is famed for its Dravidian-style Hindu temples. In Madurai, Meenakshi Amman Temple has high ‘gopuram’ towers ornamented with colourful figures. The town of Kanyakumari, at India’s southernmost tip, is the site of ritual sunrises. Capital Chennai is known for beaches and landmarks including 1644 colonial Fort St. George.</p>
+                            <div>
+                                <span><i class="fa fa-map-marker"></i>Tamil Nadu</span>
+                                <span><i class="fa fa-sun-o"> 4 Days</i></span>
+                                <span><i class="fa fa-moon-o"></i>3 Nights</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-img">
+                            <img src="{{url_for('static', filename = 'images/Munnar.jpg') }}">
+                            <div class="price">
+                                <p>Rs.28,000</p>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                        </div>
+                        <div class="feature-details">
+                            <h4><a href="{{url_for('Kerala') }}" class="class2">Kerala</a></h4>
+                            <p>Kerala is situated in the southwestern end of the Indian subcontinent. Kerala has a long history of art and cultural heritage and foreign trade with other countries. The state with the highest literacy rate in India, is noted for its achievements in education, health, gender equality, social justice, law and order. In addition to these, the state has the lowest infant mortality rate in the country</p>
+                            <div>
+                                <span><i class="fa fa-map-marker"></i>Kerala</span>
+                                <span><i class="fa fa-sun-o"> 4 Days</i></span>
+                                <span><i class="fa fa-moon-o"></i>3 Nights</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gallery">
+        <h1>Travelling Gallery</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="gallery-box">
+                        <img src="{{url_for('static', filename = 'images/Munnar.jpg') }}">
+                        <h4>Munnar</h4>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="gallery-box">
+                        <img src="{{url_for('static', filename = 'images/Wayanad.jpg') }}">
+                        <h4>Wayanad</h4>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="gallery-box">
+                        <img src="{{url_for('static', filename = 'images/Kodaikanal_.jpg') }}">
+                        <h4>Kodaikanal</h4>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="gallery-box">
+                        <img src="{{url_for('static', filename = 'images/Varkala_beach.jpg') }}">
+                        <h4>Varkala_beach</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="banner">
+        <div class="banner-highlights">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2>Get 30% off on top destinations.</h2>
+                        <p>Book your tickets now to avail 30% discount.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" class="booking-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="users-feedback">
+        <h1>User's Review</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="user-review">
+                        <p>Our travel planner was absolutely amazing and I am looking forward to planning more trips together. She was very patient, very thorough, and gave us very practical advices .Our trip was perfectly planned and very well balanced.Everything was executed perfectly without any problems and delays. It was one of most memorable tours that exceeded all out expectations</p>
+                        <h5>Rahul Sharma</h5>
+                        <small>Delhi</small>
+                    </div>
+                    <img src="{{url_for('static', filename = 'images/adult-boy.jpg') }}">
+                </div>
+                <div class="col-md-4">
+                    <div class="user-review">
+                        <p>The team at this travel company is amazing! I would highly recommend them to anyone visiting Kerala.
+
+                            Right from the first phone call, it was apparent that this travel company was going to be the right choice to plan our trip. Our trip planner spent almost a half-hour on the phone with me getting to know my parents’ likes and dislikes.I really appreciated his knowledge and candor. By the way, the hotels he suggested for us had some of the best food of anywhere we ate on the trip.</p>
+                        <h5>Rohan D'souza</h5>
+                        <small>Mumbai</small>
+                    </div>
+                    <img src="{{url_for('static', filename = 'images/boy-casual.jpg') }}">
+                </div>
+                <div class="col-md-4">
+                    <div class="user-review">
+                        <p>We travel quite often and this was one of our best trips. All the the details were handled by our travel planner. The hotels, transfers and sites were all amazing. The tour guides were all so knowledgeable, professional and so personable. They really made it so enjoyable. They went at our pace, answered all our questions and were there for any reason or questions we had.This service cannot be beat. We have not one complaint start to finish. From the booking process to our departure. It was amazing!</p>
+                        <h5>Shreya Choudhury</h5>
+                        <small>Kolkata</small>
+                    </div>
+                    <img src="{{url_for('static', filename = 'images/beanie.jpg') }}">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="{{url_for('static', filename = 'images/logo_transparent.png') }}" class="footer-logo">
+                    <p>“Travel is the only thing you buy that makes you richer”. We completely swear by this and believe in fulfilling travel dreams that make you invariably rich by the day. We have been selling beautiful experiences for years through our state-of-the-art designed holiday packages and other essential travel services. We inspire our customers to live a rich life, full of unforgettable travel experiences. </p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Features</h4>
+                    <p>Deals & Offers</p>
+                    <p>Customer Reviews</p>
+                    <p>Cancellation Policy</p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Quick Contact</h4>
+                    <p><i class="fa fa-phone-square"></i> +91 9163587520</p>
+                    <p><i class="fa fa-envelope"></i> travmania@gmail.com</p>
+                    <p><i class="fa fa-home">49/7,Katyal Road,Kolkata-700017</i></p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Follow us on</h4>
+                    <p><i class="fa fa-facebook-official"></i> Travelmania India 07</p>
+                    <p><i class="fa fa-youtube-play"></i> Travelmania India</p>
+                    <p><i class="fa fa-twitter"></i> @Travel_mania</p>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Travelmania<i class="fa fa-copyright"> 2019</i></p>
+        </div>
+    </section>
+
+</body></html>
